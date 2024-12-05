@@ -42,33 +42,48 @@ body {
 
 /* Kluisafbeelding */
 .kluis-afbeelding {
-    width: 80%;
-    max-width: 400px;
+    width: 160%; /* 2x groter dan eerder */
+    max-width: 800px;
     margin: 20px auto;
     display: block;
 }
 
+/* Titel en tekst */
+h1 {
+    font-size: 3.5rem; /* 2x groter dan eerder */
+    margin-bottom: 20px;
+    color: #222;
+}
+
+p {
+    font-size: 1.8rem; /* 2x groter dan eerder */
+    color: #666;
+    margin-bottom: 30px;
+}
+
 /* Wachtwoord container */
 .wachtwoord-container {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 input[type="password"] {
     width: calc(100% - 22px);
-    padding: 10px;
+    max-width: 500px; /* Breder veld voor leesbaarheid */
+    padding: 15px; /* Grotere invoervelden */
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.5rem; /* Grotere tekst */
 }
 
 .btn {
     background: #f76c6c;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 15px 30px;
+    margin-top: 15px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1.5rem; /* Grotere knoptekst */
     transition: background 0.3s ease;
 }
 
@@ -78,23 +93,24 @@ input[type="password"] {
 
 /* Geheime afbeelding */
 .geheim-afbeelding {
-    width: 70%;
-    max-width: 300px;
-    margin: 20px auto;
+    width: 140%; /* 2x groter dan eerder */
+    max-width: 600px; /* Maximale breedte om proporties te behouden */
+    height: auto;
+    margin: 30px auto;
     display: block;
 }
 
 /* Geheime tekst */
 #secretText {
-    margin-top: 20px;
-    font-size: 1.2em;
-    line-height: 1.5;
-    color: #555;
+    margin-top: 30px;
+    font-size: 2rem; /* 2x groter dan eerder */
+    line-height: 2;
+    color: #444;
     text-align: center;
 }
 
 #secretText strong {
-    color: #333;
+    color: #222;
 }
 
 #secretText em {
