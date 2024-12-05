@@ -7,11 +7,17 @@ function checkPassword() {
         const secretContent = document.getElementById("secretContent");
         secretContent.classList.remove("verborgen");
 
-        // Voeg het fade-in-effect toe aan de afbeelding
+        // Voeg fade-in animatie toe aan de geheime afbeelding
         const geheimAfbeelding = document.querySelector(".geheim-afbeelding");
         geheimAfbeelding.classList.add("fade-in");
+
+        // Maak de geheime tekst zichtbaar na de afbeelding
+        setTimeout(() => {
+            const secretText = document.getElementById("secretText");
+            secretText.classList.add("fade-in");
+            secretText.classList.remove("verborgen");
+        }, 2000); // Wacht 2 seconden zodat de afbeelding eerst fade-in doet
     } else {
-        // Waarschuwing bij foutieve code
         alert("Onjuiste code. Probeer opnieuw!");
     }
 }
