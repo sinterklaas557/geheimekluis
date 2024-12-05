@@ -3,68 +3,31 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden;
     text-align: center;
+    overflow: hidden; /* Verberg scroll tijdens animatie */
 }
 
-.fade-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    animation: none;
-}
-
-.verborgen {
-    display: none;
-}
-
-.fade-out {
-    animation: fadeOut 1.5s forwards;
-}
-
-.fade-in {
-    display: flex;
-    animation: fadeIn 2.5s forwards;
-}
-
-/* Keyframes voor fade-in en fade-out */
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 800px;
+    width: 90%;
 }
 
 /* Kluisafbeelding */
 .kluis-afbeelding {
-    width: 80%;
-    max-width: 400px; /* Zorg dat de afbeelding nooit groter wordt */
-    height: auto;
-    margin: 20px 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: block;
 }
 
 /* Wachtwoord container */
@@ -74,48 +37,70 @@ body {
 
 input[type="password"] {
     width: calc(100% - 22px);
-    max-width: 300px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    transition: border 0.3s ease;
-}
-
-input[type="password"]:focus {
-    border-color: #4a90e2;
-    outline: none;
 }
 
 .btn {
-    background: #4a90e2;
+    background: #f76c6c;
     color: #fff;
     border: none;
-    padding: 12px 24px;
-    margin-top: 15px;
+    padding: 10px 20px;
+    margin-top: 10px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1rem;
     transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background: #357ab8;
+    background: #f54343;
 }
 
-/* Geheime afbeelding */
+/* Verborgen inhoud */
+.verborgen {
+    display: none;
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
+}
+
+.fade-in {
+    display: block;
+    opacity: 1;
+}
+
 .geheim-afbeelding {
-    width: 60%; /* Kleinere breedte voor betere balans */
-    max-width: 300px;
-    height: auto;
+    width: 100%;
+    max-width: 800px;
     margin: 20px auto;
+    display: block;
 }
 
-/* Geheime tekst */
 #secretText {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #444;
-    text-align: center;
     margin-top: 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #555;
+    text-align: left;
+}
+
+#secretText strong {
+    color: #333;
+}
+
+#secretText em {
+    color: #f76c6c;
+    font-style: italic;
+}
+
+/* Fade-out effect voor de oude inhoud */
+.fade-content {
+    opacity: 1;
+    transition: opacity 1.5s ease;
+}
+
+.fade-content.fade-out {
+    opacity: 0;
+    pointer-events: none;
 }
