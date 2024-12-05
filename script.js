@@ -3,13 +3,18 @@ function checkPassword() {
     const ingevoerdeCode = document.getElementById("passwordInput").value;
 
     if (ingevoerdeCode === juisteCode) {
-        // Verberg alles behalve de geheime inhoud
-        document.querySelector(".wachtwoord-container").style.display = "none";
-        document.querySelector(".kluis-afbeelding").style.display = "none";
+        // Voeg fade-out toe aan de oude inhoud
+        const fadeElements = document.querySelectorAll(".fade-content");
+        fadeElements.forEach(element => {
+            element.classList.add("fade-out");
+        });
 
-        // Toon de geheime inhoud met fade-in
-        const secretContent = document.getElementById("secretContent");
-        secretContent.classList.add("fade-in");
+        // Wacht 1.5 seconden voordat de nieuwe inhoud zichtbaar wordt
+        setTimeout(() => {
+            const secretContent = document.getElementById("secretContent");
+            secretContent.classList.remove("verborgen");
+            secretContent.classList.add("fade-in");
+        }, 1500); // Wacht tot fade-out animatie is voltooid
     } else {
         alert("Onjuiste code. Probeer opnieuw!");
     }
