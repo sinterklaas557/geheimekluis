@@ -9,11 +9,14 @@ function checkPassword() {
             element.classList.add("fade-out");
         });
 
-        // Wacht 1.5 seconden voordat de nieuwe inhoud zichtbaar wordt
+        // Toon de nieuwe inhoud met fade-in
+        const secretContent = document.getElementById("secretContent");
+        secretContent.classList.remove("verborgen");
+        secretContent.classList.add("fade-in");
+
+        // Verberg oude inhoud pas volledig na de overgang
         setTimeout(() => {
-            const secretContent = document.getElementById("secretContent");
-            secretContent.classList.remove("verborgen");
-            secretContent.classList.add("fade-in");
+            document.getElementById("mainContainer").style.display = "none";
         }, 1500); // Wacht tot fade-out animatie is voltooid
     } else {
         alert("Onjuiste code. Probeer opnieuw!");
