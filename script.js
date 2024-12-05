@@ -9,7 +9,7 @@ function checkPassword() {
             element.classList.add("fade-out");
         });
 
-        // Toon de nieuwe inhoud met fade-in
+        // Toon de nieuwe inhoud met een geoptimaliseerde fade-in
         const secretContent = document.getElementById("secretContent");
         secretContent.classList.remove("verborgen");
         secretContent.classList.add("fade-in");
