@@ -9,22 +9,22 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    text-align: center;
 }
 
 .container {
-    text-align: center;
-    padding: 20px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
+    padding: 20px;
+    max-width: 600px;
     width: 90%;
 }
 
 /* Kluisafbeelding */
 .kluis-afbeelding {
-    width: 80%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 500px;
     margin: 20px auto;
     display: block;
 }
@@ -58,10 +58,17 @@ body {
 }
 
 /* Geheime inhoud */
-#secretContent {
-    margin-top: 20px;
+.verborgen {
+    display: none;
 }
 
+#successMessage {
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #3c763d;
+}
+
+/* Geheime afbeelding */
 .geheim-afbeelding {
     width: 0;
     height: auto;
@@ -70,16 +77,19 @@ body {
 }
 
 .geheim-afbeelding.fade-in {
-    width: 80%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 500px;
     opacity: 1;
     margin: 20px auto;
     display: block;
 }
 
+/* Geheime tekst */
 #secretText {
     opacity: 0;
     transition: opacity 2s ease-in-out;
+    font-size: 1.2em;
+    line-height: 1.5;
 }
 
 #secretText.fade-in {
