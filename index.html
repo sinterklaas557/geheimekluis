@@ -10,6 +10,7 @@
 </head>
 <body>
     <main class="container">
+        <!-- Titel en instructie -->
         <h1>De geheime kluis van Sinterklaas</h1>
         <p>Voer de juiste code in om de kluis te openen.</p>
 
@@ -22,14 +23,15 @@
             <button class="btn" onclick="checkPassword()">Open de kluis</button>
         </div>
 
-        <!-- Inhoud die verschijnt na het invoeren van de juiste code -->
+        <!-- Inhoud die verschijnt na invoeren juiste code -->
         <div id="secretContent" class="verborgen">
-            <h2>Gefeliciteerd, je hebt de kluis geopend!</h2>
+            <h2 id="successMessage" class="verborgen">Gefeliciteerd, je hebt de kluis geopend!</h2>
             <img src="geheim.jpg" alt="Een geheime afbeelding" class="geheim-afbeelding">
             <div id="secretText" class="verborgen">
-                <p>De Sint nodigt jullie van harte uit voor <em>Normality No More: Schuberts Winterreise revisited</em> door 
-                   <strong>Conny Janssen Danst, Via Berlin & Ragazze Quartet</strong>.<br>
-                   <strong>22 december, 14:30</strong>, Schouwburg Rotterdam.</p>
+                <p><strong>De Sint nodigt jullie van harte uit:</strong></p>
+                <p><em>Normality No More: Schuberts Winterreise revisited</em></p>
+                <p>Door <strong>Conny Janssen Danst</strong>, <strong>Via Berlin</strong> & <strong>Ragazze Quartet</strong></p>
+                <p><strong>22 december, 14:30</strong><br>Schouwburg Rotterdam</p>
             </div>
         </div>
     </main>
