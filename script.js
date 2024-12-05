@@ -3,18 +3,18 @@ function checkPassword() {
     const ingevoerdeCode = document.getElementById("passwordInput").value;
 
     if (ingevoerdeCode === juisteCode) {
-        const mainContainer = document.getElementById("mainContainer");
-        const secretContainer = document.getElementById("secretContainer");
+        // Voeg fade-out toe aan de oude inhoud
+        const fadeElements = document.querySelectorAll(".fade-content");
+        fadeElements.forEach(element => {
+            element.classList.add("fade-out");
+        });
 
-        // Fade-out oude inhoud
-        mainContainer.classList.add("fade-out");
-
-        // Toon de nieuwe inhoud na fade-out
+        // Wacht 1.5 seconden voordat de nieuwe inhoud zichtbaar wordt
         setTimeout(() => {
-            mainContainer.classList.add("verborgen"); // Verberg oude inhoud
-            secretContainer.classList.remove("verborgen");
-            secretContainer.classList.add("fade-in"); // Fade-in nieuwe inhoud
-        }, 1500); // Duur van de fade-out
+            const secretContent = document.getElementById("secretContent");
+            secretContent.classList.remove("verborgen");
+            secretContent.classList.add("fade-in");
+        }, 1500); // Wacht tot fade-out animatie is voltooid
     } else {
         alert("Onjuiste code. Probeer opnieuw!");
     }
