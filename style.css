@@ -107,8 +107,8 @@ input[type="password"]:focus {
 
 /* Geheime afbeelding */
 .geheim-afbeelding {
-    width: 300%; /* 2x groter dan eerder */
-    max-width: 1200px; /* Maximale breedte om proporties te behouden */
+    width: 90%; /* Dynamisch schaalbaar */
+    max-width: 1200px; /* Grootte beperkt */
     height: auto;
     margin: 30px auto;
     display: block;
@@ -118,11 +118,13 @@ input[type="password"]:focus {
 
 /* Geheime tekst */
 #secretText {
-    margin-top: 30px;
-    font-size: 2rem;
-    line-height: 2.5;
+    margin-top: 20px;
+    font-size: 1.8rem; /* Proportioneel geschaald */
+    line-height: 1.8;
     color: #2c3e50;
     text-align: center;
+    max-width: 90%;
+    margin: 20px auto;
 }
 
 #secretText strong {
@@ -160,13 +162,13 @@ input[type="password"]:focus {
     }
 
     .geheim-afbeelding {
-        width: 200%; /* Kleiner op mobiele apparaten */
+        width: 80%;
         max-width: 800px;
     }
 
     #secretText {
         font-size: 1.5rem;
-        line-height: 2;
+        line-height: 1.5;
     }
 }
 
@@ -195,12 +197,12 @@ input[type="password"]:focus {
     }
 
     .geheim-afbeelding {
-        width: 150%;
+        width: 70%;
         max-width: 600px;
     }
 
     #secretText {
         font-size: 1.2rem;
-        line-height: 1.8;
+        line-height: 1.4;
     }
 }
