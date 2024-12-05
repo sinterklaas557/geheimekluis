@@ -21,13 +21,13 @@ body {
     max-width: 700px;
     width: 90%;
     position: relative;
-    min-height: 450px; /* Consistentie tijdens overgang */
+    min-height: 500px; /* Consistente hoogte */
     overflow: hidden;
 }
 
 /* Titel en tekst */
 h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 15px;
     color: #222;
 }
@@ -41,7 +41,7 @@ p {
 /* Kluisafbeelding */
 .kluis-afbeelding {
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
     margin: 20px auto;
     display: block;
     transition: opacity 1.5s ease;
@@ -110,13 +110,15 @@ input[type="password"]:focus {
     }
 }
 
+/* Geheime afbeelding */
 .geheim-afbeelding {
-    width: 150%; /* 50% groter dan de standaard grootte */
-    max-width: none; /* Geen limiet op de maximale grootte */
+    width: 120%; /* 20% groter dan standaard grootte */
+    max-width: 800px;
     margin: 20px auto;
     display: block;
 }
 
+/* Geheime tekst */
 #secretText {
     margin-top: 20px;
     font-size: 1.2rem;
