@@ -29,69 +29,21 @@ body {
     display: block;
 }
 
-/* Wachtwoord container */
-.wachtwoord-container {
-    margin-top: 20px;
-}
-
-#wachtwoord-container input {
-    width: calc(100% - 22px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.btn {
-    background: #f76c6c;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #f54343;
-}
-
 /* Geheime inhoud */
-.verborgen {
-    display: none;
-}
-
-#successMessage {
+#secretContent {
     margin-top: 20px;
-    font-size: 1.8em;
-    color: #3c763d;
 }
 
-/* Geheime afbeelding */
 .geheim-afbeelding {
-    width: 0;
-    height: auto;
-    opacity: 0;
-    transition: all 2s ease-in-out;
-}
-
-.geheim-afbeelding.fade-in {
     width: 100%;
     max-width: 500px;
-    opacity: 1;
     margin: 20px auto;
     display: block;
 }
 
-/* Geheime tekst */
 #secretText {
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
+    margin-top: 20px;
     font-size: 1.2em;
     line-height: 1.5;
-}
-
-#secretText.fade-in {
-    opacity: 1;
+    color: #555;
 }
