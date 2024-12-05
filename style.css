@@ -21,8 +21,8 @@ body {
     max-width: 700px;
     width: 90%;
     position: relative;
-    min-height: 500px;
-    overflow: hidden; /* Voorkom verspringen */
+    min-height: 600px; /* Verhoog de hoogte om ruimte te maken voor tekst */
+    overflow: hidden;
 }
 
 /* Titel en tekst */
@@ -82,7 +82,7 @@ input[type="password"]:focus {
     background: #357ab8;
 }
 
-/* Geheime inhoud */
+/* Verborgen inhoud */
 .verborgen {
     display: none;
     opacity: 0;
@@ -97,16 +97,39 @@ input[type="password"]:focus {
 @keyframes fadeInEffect {
     0% {
         opacity: 0;
-        transform: scale(0.9); /* Kleinere schaal voor dramatisch effect */
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(1); /* Normale grootte */
+        transform: scale(0.9);
     }
     100% {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* Geheime afbeelding */
+.geheim-afbeelding {
+    width: 80%; /* Verklein de afbeelding tot 80% van de containerbreedte */
+    max-width: 500px; /* Zorg dat de afbeelding nooit groter wordt dan 500px */
+    height: auto; /* Houd de afbeelding proportioneel */
+    margin: 20px auto;
+    display: block;
+}
+
+/* Geheime tekst */
+#secretText {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: left;
+}
+
+#secretText strong {
+    color: #222;
+}
+
+#secretText em {
+    color: #4a90e2;
+    font-style: italic;
 }
 
 /* Fade-out effect voor oude inhoud */
