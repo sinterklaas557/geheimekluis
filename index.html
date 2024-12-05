@@ -4,11 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geheime Kluis</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Algemene stijlen */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        /* Kluisafbeelding */
+        .kluis-afbeelding {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* Wachtwoord container */
+        .wachtwoord-container {
+            margin-top: 20px;
+        }
+
+        input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            background: #f76c6c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #f54343;
+        }
+
+        /* Verborgen inhoud */
+        .verborgen {
+            display: none;
+        }
+
+        /* Als het juiste wachtwoord wordt ingevoerd */
+        #passwordCorrect:checked ~ .verborgen {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <main class="container">
+    <div class="container">
         <!-- Titel en instructie -->
         <h1>De geheime kluis van Sinterklaas</h1>
         <p>Voer de juiste code in om de kluis te openen.</p>
@@ -16,37 +85,38 @@
         <!-- Kluisafbeelding -->
         <img src="kluis.jpg" alt="Afbeelding van een gesloten kluis" class="kluis-afbeelding">
 
-        <!-- Formulier voor wachtwoord -->
-        <form action="" method="POST">
-            <div class="wachtwoord-container">
-                <input type="password" name="password" placeholder="Voer de code in" required>
-                <button type="submit" class="btn">Open de kluis</button>
+        <!-- Wachtwoord invoeren -->
+        <div class="wachtwoord-container">
+            <label>
+                <input type="password" id="passwordInput" placeholder="Voer de code in" oninput="checkPassword(this)">
+            </label>
+        </div>
+
+        <!-- Verborgen inhoud -->
+        <input type="checkbox" id="passwordCorrect" class="verborgen">
+        <div class="verborgen">
+            <h2>Gefeliciteerd, je hebt de kluis geopend!</h2>
+            <img src="geheim.jpg" alt="Geheime afbeelding" class="kluis-afbeelding">
+            <div>
+                <p><strong>De Sint nodigt jullie van harte uit:</strong></p>
+                <p><em>Normality No More: Schuberts Winterreise revisited</em></p>
+                <p>Door <strong>Conny Janssen Danst</strong>, <strong>Via Berlin</strong> & <strong>Ragazze Quartet</strong></p>
+                <p><strong>22 december, 14:30</strong><br>Schouwburg Rotterdam</p>
             </div>
-        </form>
+        </div>
+    </div>
 
-        <!-- Geheime inhoud, alleen zichtbaar na juiste invoer -->
-        <?php
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $juisteCode = "geheim123"; // Het juiste wachtwoord
-            $ingevoerdeCode = $_POST['password'] ?? '';
+    <script>
+        function checkPassword(input) {
+            const juisteCode = "geheim123";
+            const checkbox = document.getElementById("passwordCorrect");
 
-            if ($ingevoerdeCode === $juisteCode) {
-                echo '
-                <div id="secretContent">
-                    <h2>Gefeliciteerd, je hebt de kluis geopend!</h2>
-                    <img src="geheim.jpg" alt="Geheime afbeelding" class="geheim-afbeelding">
-                    <div id="secretText">
-                        <p><strong>De Sint nodigt jullie van harte uit:</strong></p>
-                        <p><em>Normality No More: Schuberts Winterreise revisited</em></p>
-                        <p>Door <strong>Conny Janssen Danst</strong>, <strong>Via Berlin</strong> & <strong>Ragazze Quartet</strong></p>
-                        <p><strong>22 december, 14:30</strong><br>Schouwburg Rotterdam</p>
-                    </div>
-                </div>';
+            if (input.value === juisteCode) {
+                checkbox.checked = true;
             } else {
-                echo '<p style="color: red;">Onjuiste code. Probeer opnieuw!</p>';
+                checkbox.checked = false;
             }
         }
-        ?>
-    </main>
+    </script>
 </body>
 </html>
