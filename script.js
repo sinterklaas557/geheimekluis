@@ -13,11 +13,6 @@ function checkPassword() {
         const secretContent = document.getElementById("secretContent");
         secretContent.classList.remove("verborgen");
         secretContent.classList.add("fade-in");
-
-        // Verberg oude inhoud volledig na de overgang
-        setTimeout(() => {
-            document.getElementById("mainContainer").style.display = "none";
-        }, 1500); // Wacht tot fade-out animatie is voltooid
     } else {
         alert("Onjuiste code. Probeer opnieuw!");
     }
