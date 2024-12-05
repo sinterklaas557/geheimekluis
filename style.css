@@ -57,7 +57,11 @@ input[type="password"] {
     background: #f54343;
 }
 
-/* Geheime inhoud */
+/* Verborgen inhoud */
+.verborgen {
+    display: none;
+}
+
 #secretContent {
     margin-top: 20px;
 }
@@ -74,4 +78,14 @@ input[type="password"] {
     font-size: 1.2em;
     line-height: 1.5;
     color: #555;
+    text-align: left;
+}
+
+#secretText strong {
+    color: #333;
+}
+
+#secretText em {
+    color: #f76c6c;
+    font-style: italic;
 }
