@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kluis Website</title>
+    <title>Geheime Kluis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>De Kluis</h1>
+        <h1>De Geheime Kluis</h1>
         <p>Voer de juiste code in om de kluis te openen.</p>
 
-        <div class="kluis">
-            <input type="password" id="codeInput" placeholder="Voer de code in">
-            <button onclick="openKluis()">Open de kluis</button>
+        <!-- Kluisafbeelding -->
+        <img src="kluis.jpg" alt="Kluis" class="kluis-afbeelding">
+
+        <!-- Wachtwoord invoeren -->
+        <div class="wachtwoord-container">
+            <input type="password" id="passwordInput" placeholder="Voer de code in">
+            <button onclick="checkPassword()">Open de kluis</button>
         </div>
 
-        <div id="kluisInhoud" class="verborgen">
-            <h2>Gefeliciteerd! De kluis is open.</h2>
-            <img src="afbeelding.jpg" alt="Geheime afbeelding">
-            <p>Hier is je geheime bericht: "Je hebt de code gekraakt!"</p>
+        <!-- Inhoud die verschijnt na het invoeren van de juiste code -->
+        <div id="secretContent" class="verborgen">
+            <h2>Gefeliciteerd, je hebt de kluis geopend!</h2>
+            <img src="geheim.jpg" alt="Geheime afbeelding" class="geheim-afbeelding">
+            <p>Hier is je geheime boodschap: "Het grootste geheim is onthuld."</p>
         </div>
     </div>
 
