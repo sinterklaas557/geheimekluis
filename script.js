@@ -14,6 +14,12 @@ function checkPassword() {
         setTimeout(() => {
             secretContainer.classList.remove("verborgen");
             secretContainer.classList.add("visible");
+
+            // Scroll automatisch naar boven
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }, 1500); // Wacht tot fade-out is voltooid
     } else {
         alert("Onjuiste code. Probeer opnieuw!");
