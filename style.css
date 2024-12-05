@@ -3,17 +3,17 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    background: linear-gradient(135deg, #f3f4f6, #e8eaed);
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    overflow: hidden; /* Verberg scrollbars */
+    overflow: hidden;
 }
 
-/* Basiscontainer voor beide schermen */
+/* Schermen */
 .screen {
     position: absolute;
     top: 0;
@@ -40,25 +40,28 @@ body {
     visibility: hidden;
 }
 
-/* Kluisafbeelding */
-.kluis-afbeelding {
-    width: 160%; /* 2x groter dan eerder */
-    max-width: 800px;
-    margin: 20px auto;
-    display: block;
-}
-
 /* Titel en tekst */
 h1 {
-    font-size: 3.5rem; /* 2x groter dan eerder */
+    font-size: 3.5rem;
     margin-bottom: 20px;
-    color: #222;
+    color: #2c3e50;
+    font-weight: 700;
 }
 
 p {
-    font-size: 1.8rem; /* 2x groter dan eerder */
-    color: #666;
+    font-size: 1.8rem;
+    color: #7f8c8d;
     margin-bottom: 30px;
+}
+
+/* Kluisafbeelding */
+.kluis-afbeelding {
+    width: 70%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Wachtwoord container */
@@ -68,52 +71,65 @@ p {
 
 input[type="password"] {
     width: calc(100% - 22px);
-    max-width: 500px; /* Breder veld voor leesbaarheid */
-    padding: 15px; /* Grotere invoervelden */
-    border: 1px solid #ccc;
+    max-width: 500px;
+    padding: 15px;
+    border: 1px solid #bdc3c7;
     border-radius: 5px;
-    font-size: 1.5rem; /* Grotere tekst */
+    font-size: 1.5rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
 .btn {
-    background: #f76c6c;
+    background: #3498db;
     color: #fff;
     border: none;
     padding: 15px 30px;
     margin-top: 15px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1.5rem; /* Grotere knoptekst */
-    transition: background 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-    background: #f54343;
+    background: #2980b9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Geheime afbeelding */
 .geheim-afbeelding {
-    width: 140%; /* 2x groter dan eerder */
-    max-width: 600px; /* Maximale breedte om proporties te behouden */
+    width: 200%; /* 3x groter dan standaard */
+    max-width: 900px; /* Maximale breedte om proporties te behouden */
     height: auto;
     margin: 30px auto;
     display: block;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Geheime tekst */
 #secretText {
     margin-top: 30px;
-    font-size: 2rem; /* 2x groter dan eerder */
-    line-height: 2;
-    color: #444;
+    font-size: 2rem;
+    line-height: 2.5;
+    color: #2c3e50;
     text-align: center;
 }
 
 #secretText strong {
-    color: #222;
+    color: #2c3e50;
 }
 
 #secretText em {
-    color: #f76c6c;
+    color: #e74c3c;
     font-style: italic;
 }
