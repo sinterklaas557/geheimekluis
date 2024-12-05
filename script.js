@@ -1,5 +1,5 @@
 function checkPassword() {
-    const juisteCode = "geheim123"; // Juiste code
+    const juisteCode = "1968-1984-1987"; // Juiste code
     const ingevoerdeCode = document.getElementById("passwordInput").value;
 
     if (ingevoerdeCode === juisteCode) {
