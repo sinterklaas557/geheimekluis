@@ -1,19 +1,67 @@
-/* Verborgen inhoud standaard verbergen */
-.verborgen {
-    display: none;
+/* Algemene stijlen */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Fade-in effect voor tekst */
-#secretText {
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
+.container {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
 }
 
-#secretText.fade-in {
-    opacity: 1;
+/* Kluisafbeelding */
+.kluis-afbeelding {
+    width: 80%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
 }
 
-/* Geheime afbeelding fullscreen */
+/* Wachtwoord container */
+.wachtwoord-container {
+    margin-top: 20px;
+}
+
+#wachtwoord-container input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn {
+    background: #f76c6c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #f54343;
+}
+
+/* Geheime inhoud */
+#secretContent {
+    margin-top: 20px;
+}
+
 .geheim-afbeelding {
     width: 0;
     height: auto;
@@ -22,9 +70,18 @@
 }
 
 .geheim-afbeelding.fade-in {
-    width: 90%;
-    max-width: 1000px;
+    width: 80%;
+    max-width: 600px;
     opacity: 1;
     margin: 20px auto;
     display: block;
+}
+
+#secretText {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#secretText.fade-in {
+    opacity: 1;
 }
