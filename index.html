@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kluis Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>De Kluis</h1>
+        <p>Voer de juiste code in om de kluis te openen.</p>
+
+        <div class="kluis">
+            <input type="password" id="codeInput" placeholder="Voer de code in">
+            <button onclick="openKluis()">Open de kluis</button>
+        </div>
+
+        <div id="kluisInhoud" class="verborgen">
+            <h2>Gefeliciteerd! De kluis is open.</h2>
+            <img src="afbeelding.jpg" alt="Geheime afbeelding">
+            <p>Hier is je geheime bericht: "Je hebt de code gekraakt!"</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
