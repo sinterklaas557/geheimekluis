@@ -8,19 +8,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Oude inhoud -->
-    <div id="mainContainer" class="fade-container">
-        <h1>De geheime kluis van Sinterklaas</h1>
-        <p>Voer de juiste code in om de kluis te openen.</p>
-        <img src="kluis.jpg" alt="Afbeelding van een gesloten kluis" class="kluis-afbeelding">
-        <div class="wachtwoord-container">
+    <div class="container" id="mainContainer">
+        <!-- Titel en instructie -->
+        <h1 class="fade-content">De geheime kluis van Sinterklaas</h1>
+        <p class="fade-content">Voer de juiste code in om de kluis te openen.</p>
+
+        <!-- Kluisafbeelding -->
+        <img src="kluis.jpg" alt="Afbeelding van een gesloten kluis" class="kluis-afbeelding fade-content">
+
+        <!-- Wachtwoord invoeren -->
+        <div class="wachtwoord-container fade-content">
             <input type="password" id="passwordInput" placeholder="Voer de code in">
             <button class="btn" onclick="checkPassword()">Open de kluis</button>
         </div>
     </div>
 
-    <!-- Nieuwe inhoud -->
-    <div id="secretContainer" class="fade-container verborgen">
+    <!-- Geheime inhoud -->
+    <div id="secretContent" class="verborgen">
         <h2>Gefeliciteerd, je hebt de kluis geopend!</h2>
         <img src="geheim.jpg" alt="Geheime afbeelding" class="geheim-afbeelding">
         <div id="secretText">
