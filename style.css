@@ -21,13 +21,13 @@ body {
     max-width: 700px;
     width: 90%;
     position: relative;
-    min-height: 400px; /* Consistentie tijdens overgang */
+    min-height: 450px; /* Consistentie tijdens overgang */
     overflow: hidden;
 }
 
 /* Titel en tekst */
 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 15px;
     color: #222;
 }
@@ -97,11 +97,22 @@ input[type="password"]:focus {
 .fade-in {
     display: block;
     opacity: 1;
+    animation: fadeIn 5s ease-in-out;
+}
+
+/* Animatie voor fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .geheim-afbeelding {
-    width: 100%;
-    max-width: 700px;
+    width: 150%; /* 50% groter dan de standaard grootte */
+    max-width: none; /* Geen limiet op de maximale grootte */
     margin: 20px auto;
     display: block;
 }
