@@ -10,22 +10,40 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    overflow: hidden; /* Verberg scroll tijdens animatie */
+    overflow: hidden; /* Verberg scrollbars */
 }
 
-.container {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    max-width: 800px;
-    width: 90%;
+/* Basiscontainer voor beide schermen */
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, visibility 0s linear 1.5s;
+}
+
+.screen.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1.5s ease, visibility 0s linear 0s;
+}
+
+.screen.verborgen {
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Kluisafbeelding */
 .kluis-afbeelding {
-    width: 100%;
-    max-width: 800px;
+    width: 80%;
+    max-width: 400px;
     margin: 20px auto;
     display: block;
 }
@@ -58,31 +76,21 @@ input[type="password"] {
     background: #f54343;
 }
 
-/* Verborgen inhoud */
-.verborgen {
-    display: none;
-    opacity: 0;
-    transition: opacity 5s ease-in-out;
-}
-
-.fade-in {
-    display: block;
-    opacity: 1;
-}
-
+/* Geheime afbeelding */
 .geheim-afbeelding {
-    width: 100%;
-    max-width: 800px;
+    width: 70%;
+    max-width: 300px;
     margin: 20px auto;
     display: block;
 }
 
+/* Geheime tekst */
 #secretText {
     margin-top: 20px;
     font-size: 1.2em;
     line-height: 1.5;
     color: #555;
-    text-align: left;
+    text-align: center;
 }
 
 #secretText strong {
@@ -92,15 +100,4 @@ input[type="password"] {
 #secretText em {
     color: #f76c6c;
     font-style: italic;
-}
-
-/* Fade-out effect voor de oude inhoud */
-.fade-content {
-    opacity: 1;
-    transition: opacity 1.5s ease;
-}
-
-.fade-content.fade-out {
-    opacity: 0;
-    pointer-events: none;
 }
