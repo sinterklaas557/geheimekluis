@@ -14,7 +14,7 @@ function checkPassword() {
         secretContent.classList.remove("verborgen");
         secretContent.classList.add("fade-in");
 
-        // Verberg oude inhoud pas volledig na de overgang
+        // Verberg oude inhoud volledig na de overgang
         setTimeout(() => {
             document.getElementById("mainContainer").style.display = "none";
         }, 1500); // Wacht tot fade-out animatie is voltooid
