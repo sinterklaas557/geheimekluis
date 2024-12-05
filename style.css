@@ -133,3 +133,74 @@ input[type="password"]:focus {
     color: #e74c3c;
     font-style: italic;
 }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    .kluis-afbeelding {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    input[type="password"] {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+    }
+
+    .geheim-afbeelding {
+        width: 200%; /* Kleiner op mobiele apparaten */
+        max-width: 800px;
+    }
+
+    #secretText {
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .kluis-afbeelding {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    input[type="password"] {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .geheim-afbeelding {
+        width: 150%;
+        max-width: 600px;
+    }
+
+    #secretText {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+}
