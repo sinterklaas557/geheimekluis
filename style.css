@@ -107,8 +107,8 @@ input[type="password"]:focus {
 
 /* Geheime afbeelding */
 .geheim-afbeelding {
-    width: 200%; /* 3x groter dan standaard */
-    max-width: 900px; /* Maximale breedte om proporties te behouden */
+    width: 300%; /* 2x groter dan eerder */
+    max-width: 1200px; /* Maximale breedte om proporties te behouden */
     height: auto;
     margin: 30px auto;
     display: block;
